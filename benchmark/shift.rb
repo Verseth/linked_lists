@@ -4,7 +4,8 @@ require_relative 'benchmark_helper'
 
 COUNT = 10_000
 ARRAY = Array(0...COUNT)
-LIST = LinkedList.new(0...COUNT)
+LIST = LinkedList.new#(0...COUNT)
+COUNT.times { LIST >> _1 }
 
 def array_shift
   while ARRAY.shift; end
